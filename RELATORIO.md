@@ -31,9 +31,9 @@ Previsões registradas no commit: <!-- cole o hash curto do commit de previsões
 
 | Grandeza | Previsão | Medido |
 | --- | --- | --- |
-| Memória da lista / memória do `uint16` |18| |
-| Tempo do laço / tempo vetorizado |10| |
-| Tempo da compreensão / tempo do laço |1| |
+| Memória da lista / memória do `uint16` |18|17.8|
+| Tempo do laço / tempo vetorizado |10|49.9|
+| Tempo da compreensão / tempo do laço |1|1.4|
 
 <!-- Explique a maior diferença entre previsão e medição; por que uint16 * 20 dá 16364; que dtype você escolheria para contagens e para kPa. -->
 
@@ -41,13 +41,13 @@ Previsões registradas no commit: <!-- cole o hash curto do commit de previsões
 
 | Expressão | Tipo previsto | Tipo observado |
 | --- | --- | --- |
-| `s + s` |SerieTemporal| |
-| `s[1:]` |SerieTemporal| |
-| `s * 2` |SerieTemporal| |
-| `s.sum()` |Float| |
-| `s[0]` |Float| |
+| `s + s` |SerieTemporal|SerieTemporal|
+| `s[1:]` |SerieTemporal|SerieTemporal|
+| `s * 2` |SerieTemporal|SerieTemporal|
+| `s.sum()` |Float|SerieTemporal|
+| `s[0]` |float64|float64|
 
-<!-- Explique o resultado que mais surpreendeu você. -->
+Pensei que s.sum somaria os valores da SerieTemporal
 
 ### R7 — Issue #4
 
